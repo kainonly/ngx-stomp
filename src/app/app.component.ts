@@ -12,7 +12,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.stomp.connect();
-    this.stomp.ready.subscribe(({client}) => {
+    this.stomp.ready.subscribe(({client,frame}) => {
       client.subscribe('/exchange/test', message => {
         console.log(message);
       });
