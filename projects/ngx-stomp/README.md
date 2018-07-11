@@ -13,7 +13,7 @@ First install the stompjs library to support the browser stomp protocol.
 $ npm install @stomp/stompjs --save
 ```
 
-Then install this library to support Angular
+Then install this library to support Angular or Ionic
 
 ``` shell
 $ npm install ngx-stomp --save 
@@ -21,7 +21,7 @@ $ npm install ngx-stomp --save
 
 ## Usage
 
-Add in angular.json
+If it's Angular project, modify in `angular.json` or `angular-cli.json`
 
 ``` json
 {
@@ -31,7 +31,39 @@ Add in angular.json
 }
 ```
 
-Modify in the app.module.ts
+If it's Ionic project, first modify package.json, like this:
+
+``` json
+{
+  "name": "library",
+  "config": {
+    "ionic_copy": "./config/copy.config.js"
+  }
+}
+```
+
+Create file `copy.config`
+
+``` javascript
+// path config/copy.config.js
+module.exports = {
+  copyCropperjs: {
+    src: ["{{ROOT}}/node_modules/@stomp/stompjs/lib/stomp.min.js"],
+    dest: "{{BUILD}}"
+  }
+};
+```
+
+Add `stomp.min.js` the `index.html`
+
+``` html
+<!-- src/index.html -->
+<script src="build/stomp.min.js"></script>
+```
+
+> After that, Angular and Ionic use are the same.
+
+Modify in the `app.module.ts`
 
 ``` typescript
 import {NgxStompConfig, NgxStompService} from 'ngx-stomp';
@@ -56,7 +88,7 @@ import {NgxStompConfig, NgxStompService} from 'ngx-stomp';
 })
 ```
 
-Connect Stomp
+Connect to the stomp service
 
 ``` typescript
 ...
@@ -68,7 +100,7 @@ this.stomp.connect();
 ...
 ```
 
-Subscription
+Subscribe to the message queue
 
 ``` typescript
 this.stomp.ready.subscribe(({client,frame}) => {

@@ -6,9 +6,7 @@ import {ReadySubject} from './declare';
 
 declare let Stomp: any;
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class NgxStompService {
   // TODO: ready subject events
   ready: AsyncSubject<ReadySubject> = new AsyncSubject<ReadySubject>();
