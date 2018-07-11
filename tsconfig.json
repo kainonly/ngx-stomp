@@ -15,6 +15,14 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-stomp": [
+        "dist/ngx-stomp"
+      ],
+      "ngx-stomp/*": [
+        "dist/ngx-stomp/*"
+      ]
+    }
   }
 }
