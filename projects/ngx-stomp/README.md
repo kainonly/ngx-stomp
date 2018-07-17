@@ -110,5 +110,9 @@ this.stomp.ready.subscribe(({client,frame}) => {
 });
 ```
 
+Destory service and disconnect
 
+``` typescript
+this.stomp.destory();
+```
 
