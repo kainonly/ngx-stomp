@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-message": {
+    "ngx-message-demo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-message",
+            "outputPath": "dist/ngx-message-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-message:build"
+            "browserTarget": "ngx-message-demo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-message:build:production"
+              "browserTarget": "ngx-message-demo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-message:build"
+            "browserTarget": "ngx-message-demo:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "ngx-message-e2e": {
+    "ngx-message-demo-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-message:serve"
+            "devServerTarget": "ngx-message-demo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-message:serve:production"
+              "devServerTarget": "ngx-message-demo:serve:production"
             }
           }
         },
@@ -121,7 +121,42 @@
           }
         }
       }
+    },
+    "ngx-message": {
+      "root": "projects/ngx-message",
+      "sourceRoot": "projects/ngx-message/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-message/tsconfig.lib.json",
+            "project": "projects/ngx-message/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-message/src/test.ts",
+            "tsConfig": "projects/ngx-message/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-message/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-message/tsconfig.lib.json",
+              "projects/ngx-message/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
-  "defaultProject": "ngx-message"
+  "defaultProject": "ngx-message-demo"
 }
