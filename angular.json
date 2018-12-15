@@ -121,6 +121,41 @@
           }
         }
       }
+    },
+    "ngx-stomp": {
+      "root": "projects/ngx-stomp",
+      "sourceRoot": "projects/ngx-stomp/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-stomp/tsconfig.lib.json",
+            "project": "projects/ngx-stomp/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-stomp/src/test.ts",
+            "tsConfig": "projects/ngx-stomp/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-stomp/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-stomp/tsconfig.lib.json",
+              "projects/ngx-stomp/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ngx-message-queue"

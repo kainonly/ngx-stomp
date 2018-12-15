@@ -23,6 +23,12 @@
       ],
       "ngx-message/*": [
         "dist/ngx-message/*"
+      ],
+      "ngx-stomp": [
+        "dist/ngx-stomp"
+      ],
+      "ngx-stomp/*": [
+        "dist/ngx-stomp/*"
       ]
     }
   }
