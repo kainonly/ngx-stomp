@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'lib-ngx-stomp',
@@ -11,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NgxStompComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

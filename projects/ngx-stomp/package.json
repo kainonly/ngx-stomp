@@ -1,6 +1,22 @@
 {
   "name": "ngx-stomp",
-  "version": "0.0.1",
+  "version": "1.2.0",
+  "description": "Angular Support Stomp.js",
+  "keywords": [
+    "ecosystem:angular",
+    "angular",
+    "stomp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kainonly/ngx-message-queue.git"
+  },
+  "author": "kain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kainonly/ngx-message-queue/issues"
+  },
+  "homepage": "https://github.com/kainonly/ngx-message-queue#readme",
   "peerDependencies": {
     "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
     "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
