@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { NgxStompService } from './ngx-stomp.service';
+import {NgxStompService} from './ngx-stomp.service';
 
 describe('NgxStompService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
