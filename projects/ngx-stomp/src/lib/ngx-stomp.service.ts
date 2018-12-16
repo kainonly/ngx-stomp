@@ -1,13 +1,10 @@
 import {Injectable} from '@angular/core';
-import {Client, Frame} from '@stomp/stompjs';
-
-interface ReadySubject {
-  client: Client;
-  frame: Frame;
-}
+import {Config} from './declare';
 
 @Injectable()
 export class NgxStompService {
+  config: Config;
+
   constructor() {
   }
 }
