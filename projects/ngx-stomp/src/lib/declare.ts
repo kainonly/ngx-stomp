@@ -8,11 +8,11 @@ export interface Config {
   /**
    * TODO: Client Reconnect Delay
    */
-  reconnect_delay: number;
+  reconnect_delay?: number;
   /**
    * TODO: Client Debug
    */
-  debug: null | ((...args) => any);
+  debug?: null | ((...args) => any);
   /**
    * TODO: Connect Username
    */
@@ -24,15 +24,15 @@ export interface Config {
   /**
    * TODO: Heartbeat Incoming
    */
-  incoming: number;
+  incoming?: number;
   /**
    * TODO: Heartbeat Outgoing
    */
-  outgoing: number;
+  outgoing?: number;
   /**
    * TODO: Client Vhost
    */
-  vhost: string;
+  vhost?: string;
 }
 
 export interface ReadySubject {

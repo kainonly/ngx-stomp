@@ -9,7 +9,8 @@ import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
 import {registerLocaleData} from '@angular/common';
 import zh from '@angular/common/locales/zh';
 
-import {NgxStompService} from 'ngx-stomp-dev';
+import {NgxStompModule} from 'ngx-stomp-dev';
+import env from '../env';
 
 registerLocaleData(zh);
 
@@ -22,13 +23,14 @@ registerLocaleData(zh);
     BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
-    NgZorroAntdModule
+    NgZorroAntdModule,
+    NgxStompModule.forRoot({
+      url: env.host,
+      username: env.user,
+      password: env.pwd
+    })
   ],
   providers: [
-    {
-      provide: NgxStompService,
-      useValue: {}
-    },
     {provide: NZ_I18N, useValue: zh_CN}
   ],
   bootstrap: [AppComponent]
