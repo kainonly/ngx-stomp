@@ -18,6 +18,9 @@
       "dom"
     ],
     "paths": {
+      "ngx-stomp-dev": [
+        "projects/ngx-stomp/src/public_api.ts"
+      ],
       "ngx-stomp": [
         "dist/ngx-stomp"
       ],
