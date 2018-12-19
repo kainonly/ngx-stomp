@@ -1,11 +1,12 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {Config} from './declare';
+import {Client} from '@stomp/stompjs';
 import {NgxStompService} from './ngx-stomp.service';
 import {ConfigService} from './config.service';
 
+
 @NgModule()
 export class NgxStompModule {
-  static forRoot(config: Config): ModuleWithProviders {
+  static forRoot(config: Client): ModuleWithProviders {
     return {
       ngModule: NgxStompModule,
       providers: [

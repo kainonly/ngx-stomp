@@ -25,9 +25,7 @@ registerLocaleData(zh);
     HttpClientModule,
     NgZorroAntdModule,
     NgxStompModule.forRoot({
-      url: env.host,
-      username: env.user,
-      password: env.pwd
+      brokerURL: env.host
     })
   ],
   providers: [
