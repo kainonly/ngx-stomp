@@ -18,12 +18,6 @@
       "dom"
     ],
     "paths": {
-      "ngx-message": [
-        "dist/ngx-message"
-      ],
-      "ngx-message/*": [
-        "dist/ngx-message/*"
-      ],
       "ngx-stomp": [
         "dist/ngx-stomp"
       ],
