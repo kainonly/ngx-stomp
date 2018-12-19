@@ -1,7 +1,12 @@
 {
   "name": "ngx-message-queue",
   "scripts": {
-    "start": "ng serve"
+    "start": "ng serve --host 0.0.0.0 --disableHostCheck --progress",
+    "build": "ng build --prod --buildOptimizer --optimization",
+    "server": "http-server -p 4201 -c-1 dist/node",
+    "build:ngx-stomp": "ng build ngx-stomp",
+    "release:ngx-stomp": "npm run build:ngx-stomp && cd dist/ngx-stomp && npm publish --access",
+    "lint": "ng lint --silent"
   },
   "private": true,
   "dependencies": {
