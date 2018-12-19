@@ -1,6 +1,6 @@
 import {ModuleWithProviders, NgModule} from '@angular/core';
-import {NgxStompService} from 'ngx-stomp-dev';
 import {Config} from './declare';
+import {NgxStompService} from './ngx-stomp.service';
 import {ConfigService} from './config.service';
 
 @NgModule()

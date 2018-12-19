@@ -18,9 +18,8 @@ export class NgxStompService {
   ready: AsyncSubject<ReadySubject> = new AsyncSubject<ReadySubject>();
 
   constructor(private config: ConfigService) {
-    console.log(Stomp);
+    console.log(this.config);
   }
-
 
   /**
    * connect stomp
