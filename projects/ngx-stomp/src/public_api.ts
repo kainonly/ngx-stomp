@@ -3,3 +3,4 @@
  */
 
 export * from './lib/ngx-stomp.service';
+export * from './lib/ngx-stomp.module';
