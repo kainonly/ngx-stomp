@@ -12,8 +12,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   active_path = '/';
   routerlinks = [
-    {path: '/', label: 'Getting Started'},
-    {path: '/stomp', label: 'Example Stomp'}
+    {path: '/', label: 'HOME'},
+    {path: '/stomp', label: 'NGX STOMP'}
   ];
 
   constructor(private router: Router) {

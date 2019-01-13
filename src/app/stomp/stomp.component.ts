@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-stomp',
   templateUrl: './stomp.component.html',
-  styleUrls: ['./stomp.component.css']
+  styleUrls: ['./stomp.component.scss']
 })
 export class StompComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

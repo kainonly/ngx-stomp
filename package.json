@@ -1,13 +1,10 @@
 {
   "name": "ngx-message-queue",
-  "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "ng serve --baseHref=/ngx-message-queue/",
+    "build:stomp": "ng build ngx-stomp",
+    "release:stomp": "cd dist/ngx-stomp && npm publish",
+    "build:docs": "ng build --prod --baseHref=/ngx-message-queue/"
   },
   "private": true,
   "dependencies": {
@@ -22,6 +19,7 @@
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
     "ng-zorro-antd": "^1.8.1",
+    "ngx-markdown": "^7.0.4",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
