@@ -1,3 +1,1 @@
-## NGX Message Queue
-
-- ngx-stomp
+## NGX Message Queue Demo

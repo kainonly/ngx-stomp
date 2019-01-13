@@ -8,11 +8,12 @@ import {registerLocaleData} from '@angular/common';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import {NgZorroAntdModule, NZ_I18N, zh_CN} from 'ng-zorro-antd';
+import {MarkdownModule} from 'ngx-markdown';
 
 import zh from '@angular/common/locales/zh';
 import {HomeComponent} from './home/home.component';
 import {StompComponent} from './stomp/stomp.component';
-import {MarkdownModule} from 'ngx-markdown';
+import {MqttComponent} from './mqtt/mqtt.component';
 
 registerLocaleData(zh);
 
@@ -21,6 +22,7 @@ registerLocaleData(zh);
     AppComponent,
     HomeComponent,
     StompComponent,
+    MqttComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +34,12 @@ registerLocaleData(zh);
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'stomp', component: StompComponent},
+      {path: 'mqtt', component: MqttComponent}
     ], {useHash: true})
   ],
-  providers: [{provide: NZ_I18N, useValue: zh_CN}],
+  providers: [
+    {provide: NZ_I18N, useValue: zh_CN}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

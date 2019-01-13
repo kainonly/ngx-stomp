@@ -23,6 +23,9 @@
       ],
       "ngx-stomp/*": [
         "dist/ngx-stomp/*"
+      ],
+      "dev-ngx-stomp": [
+        "projects/ngx-stomp/src/public_api.ts"
       ]
     }
   }

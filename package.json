@@ -2,9 +2,7 @@
   "name": "ngx-message-queue",
   "scripts": {
     "start": "ng serve --baseHref=/ngx-message-queue/",
-    "build:stomp": "ng build ngx-stomp",
-    "release:stomp": "cd dist/ngx-stomp && npm publish",
-    "build:docs": "ng build --prod --baseHref=/ngx-message-queue/"
+    "build": "ng build --prod --baseHref=/ngx-message-queue/"
   },
   "private": true,
   "dependencies": {
