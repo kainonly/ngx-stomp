@@ -3,17 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-message-queue": {
+    "message": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-message-queue",
+            "outputPath": "dist/message",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,16 +27,10 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.css",
-              "node_modules/prismjs/themes/prism-okaidia.css"
+              "src/styles.scss"
             ],
-            "scripts": [
-              "node_modules/marked/lib/marked.js",
-              "node_modules/prismjs/prism.js",
-              "node_modules/prismjs/components/prism-json.js",
-              "node_modules/prismjs/components/prism-typescript.js"
-            ]
+            "scripts": [],
+            "es5BrowserSupport": true
           },
           "configurations": {
             "production": {
@@ -50,25 +48,32 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
             }
           }
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-message-queue:build"
+            "browserTarget": "message:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-message-queue:build:production"
+              "browserTarget": "message:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-message-queue:build"
+            "browserTarget": "message:build"
           }
         },
         "test": {
@@ -79,8 +84,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
@@ -103,19 +107,20 @@
         }
       }
     },
-    "ngx-message-queue-e2e": {
+    "message-e2e": {
       "root": "e2e/",
       "projectType": "application",
+      "prefix": "",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngx-message-queue:serve"
+            "devServerTarget": "message:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngx-message-queue:serve:production"
+              "devServerTarget": "message:serve:production"
             }
           }
         },
@@ -129,42 +134,7 @@
           }
         }
       }
-    },
-    "ngx-stomp": {
-      "root": "projects/ngx-stomp",
-      "sourceRoot": "projects/ngx-stomp/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/ngx-stomp/tsconfig.lib.json",
-            "project": "projects/ngx-stomp/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/ngx-stomp/src/test.ts",
-            "tsConfig": "projects/ngx-stomp/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-stomp/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-stomp/tsconfig.lib.json",
-              "projects/ngx-stomp/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
     }
   },
-  "defaultProject": "ngx-message-queue"
+  "defaultProject": "message"
 }
