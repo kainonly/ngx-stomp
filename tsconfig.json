@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-mqtt-lite": [
+        "dist/ngx-mqtt-lite"
+      ],
+      "ngx-mqtt-lite/*": [
+        "dist/ngx-mqtt-lite/*"
+      ]
+    }
   }
 }

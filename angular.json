@@ -138,6 +138,41 @@
           }
         }
       }
+    },
+    "ngx-mqtt-lite": {
+      "root": "projects/ngx-mqtt-lite",
+      "sourceRoot": "projects/ngx-mqtt-lite/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-mqtt-lite/tsconfig.lib.json",
+            "project": "projects/ngx-mqtt-lite/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-mqtt-lite/src/test.ts",
+            "tsConfig": "projects/ngx-mqtt-lite/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-mqtt-lite/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-mqtt-lite/tsconfig.lib.json",
+              "projects/ngx-mqtt-lite/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "message"

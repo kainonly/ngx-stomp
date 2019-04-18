@@ -1,0 +1,9 @@
+{
+  "name": "ngx-mqtt-lite",
+  "version": "7.0.0-beta.0",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0",
+    "mqtt": "^2.18.8"
+  }
+}
