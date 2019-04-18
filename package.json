@@ -1,13 +1,9 @@
 {
   "name": "message",
-  "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "build": "ng build ngx-mqtt-lite",
+    "release": "cd dist/ngx-mqtt-lite && npm publish"
   },
   "private": true,
   "dependencies": {
