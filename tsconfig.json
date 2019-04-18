@@ -21,6 +21,12 @@
     "paths": {
       "ngx-mqtt-lite": [
         "projects/ngx-mqtt-lite/src/public-api.ts"
+      ],
+      "ngx-stomp": [
+        "dist/ngx-stomp"
+      ],
+      "ngx-stomp/*": [
+        "dist/ngx-stomp/*"
       ]
     }
   }

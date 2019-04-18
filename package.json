@@ -2,8 +2,10 @@
   "name": "message",
   "scripts": {
     "start": "ng serve",
-    "build": "ng build ngx-mqtt-lite",
-    "release": "cd dist/ngx-mqtt-lite && npm publish"
+    "build:mqtt": "ng build ngx-mqtt-lite",
+    "release:mqtt": "cd dist/ngx-mqtt-lite && npm publish",
+    "build:stomp": "ng build ngx-stomp",
+    "release:stomp": "cd dist/ngx-stomp && npm publish"
   },
   "private": true,
   "dependencies": {
@@ -15,6 +17,7 @@
     "@angular/platform-browser": "~7.2.13",
     "@angular/platform-browser-dynamic": "~7.2.13",
     "@angular/router": "~7.2.13",
+    "@stomp/stompjs": "^5.3.0",
     "core-js": "^2.5.4",
     "mqtt": "^2.18.8",
     "ng-zorro-antd": "^7.2.0",
