@@ -8,7 +8,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {registerLocaleData} from '@angular/common';
 import en from '@angular/common/locales/en';
-import {MqttService} from './mqtt.service';
+import {NgxMqttLiteService} from 'ngx-mqtt-lite';
 
 registerLocaleData(en);
 
@@ -24,6 +24,7 @@ registerLocaleData(en);
     BrowserAnimationsModule
   ],
   providers: [
+    NgxMqttLiteService,
     {provide: NZ_I18N, useValue: en_US},
   ],
   bootstrap: [AppComponent]
