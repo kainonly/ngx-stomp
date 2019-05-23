@@ -1,6 +1,6 @@
 {
   "name": "ngx-stomp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Angular Support Stomp.js",
   "keywords": [
     "ecosystem:angular",
