@@ -2,10 +2,10 @@
 
 A Lite Wrapper Around MQTT.js for Angular
 
-[![NPM version](https://badge.fury.io/js/ngx-mqtt-lite.png)](http://badge.fury.io/js/ngx-mqtt-lite)
+[![npm](https://img.shields.io/npm/v/ngx-mqtt-lite.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mqtt-lite)
 [![Downloads](https://img.shields.io/npm/dm/ngx-mqtt-lite.svg?style=flat-square)](https://www.npmjs.com/package/ngx-mqtt-lite)
-[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg)](https://www.typescriptlang.org/)
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/kainonly/ngx-bit.js/master/LICENSE)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/kainonly/ngx-message-queue/blob/master/LICENSE)
 
 ### Setup
 
@@ -81,9 +81,10 @@ export class AppComponent implements OnInit {
 
 # Ngx Stomp
 
-
-[![npm](https://img.shields.io/npm/v/ngx-stomp.svg)](https://www.npmjs.com/package/ngx-stomp) 
-[![npm](https://img.shields.io/npm/dm/ngx-stomp.svg)](https://www.npmjs.com/package/ngx-stomp)
+[![npm](https://img.shields.io/npm/v/ngx-stomp.svg?style=flat-square)](https://www.npmjs.com/package/ngx-stomp)
+[![Downloads](https://img.shields.io/npm/dm/ngx-stomp.svg?style=flat-square)](https://www.npmjs.com/package/ngx-stomp)
+[![TypeScript](https://img.shields.io/badge/%3C%2F%3E-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org/)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/kainonly/ngx-message-queue/blob/master/LICENSE)
 
 Support Stomp.js for Angular or Ionic
 
