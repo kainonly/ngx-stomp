@@ -1,8 +1,6 @@
 import {Client, Frame} from '@stomp/stompjs';
 
 export interface Config {
-
-
   /**
    * TODO: Websockets Url
    */
